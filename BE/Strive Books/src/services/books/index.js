@@ -182,20 +182,19 @@ booksRouter.post(
   }
 )
 
-booksRouter.delete(
-  "/:commentId",
-  async (req, res, next) => {
+ booksRouter.delete( "/:commentId", async (req, res, next) => {
     try {
-      console.log("television")
+      
       const books = await getBooks()
+      console.log(books)
+      // const bookIndex = books.findIndex(
+      //   book => req.query.commentId === book.comments.forEach(comment => {
+      //     comment._id === req.query.commentId
+      //     console.log("comment::::::::", comment)
+      //   })
+      // )
 
-      const bookIndex = books.findIndex(
-        book => req.query.commentId === book.comments.forEach(comment => {
-          comment._id === req.query.commentId
-          console.log("comment::::::::", comment)
-        })
-      )
-
+      const bookIndex = "1";
       console.log("bookIndex::::::::::::", bookIndex)
   
       if (bookIndex !== -1) {
